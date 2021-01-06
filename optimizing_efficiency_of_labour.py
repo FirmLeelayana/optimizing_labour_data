@@ -142,16 +142,3 @@ def best_and_worst_hour(percentages):
 
     return [index_best, index_worst] 
 
-def main(path_to_shifts, path_to_sales):
-
-    shifts_processed = process_shifts(path_to_shifts)
-    sales_processed = process_sales(path_to_sales)
-    percentages = compute_percentage(shifts_processed, sales_processed)
-    best_hour, worst_hour = best_and_worst_hour(percentages)
-    return best_hour, worst_hour
-
-if __name__ == '__main__':
-    path_to_sales = 'C:/Users/Firm/Documents/Cambridge Engineering/CV and Resume/Tests/Tenzo Coding Test/transactions.csv'
-    path_to_shifts = 'C:/Users/Firm/Documents/Cambridge Engineering/CV and Resume/Tests/Tenzo Coding Test/work_shifts.csv'
-    best_hour, worst_hour = main(path_to_shifts, path_to_sales)
-    print(best_hour, worst_hour)
